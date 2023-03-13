@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="646.0" prefWidth="798.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Report">
+   <children>
+      <Button layoutX="737.0" layoutY="607.0" mnemonicParsing="false" onAction="#onActionDisplayMain" text="Exit" />
+      <Label layoutX="14.0" layoutY="14.0" text="Reports">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TabPane layoutX="14.0" layoutY="59.0" prefHeight="529.0" prefWidth="773.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Appointments by Type and Month">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutX="115.0" layoutY="90.0" prefHeight="382.0" prefWidth="548.0">
+                          <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.5" minWidth="10.0" prefWidth="281.5" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="318.5" minWidth="10.0" prefWidth="318.5" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label alignment="CENTER" prefHeight="27.0" prefWidth="289.0" text="Month">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="27.0" prefWidth="318.0" text="Number of Appointments of Selected Type" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="290.0" text="January" GridPane.rowIndex="1" />
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="289.0" text="February" GridPane.rowIndex="2" />
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="290.0" text="March" GridPane.rowIndex="3" />
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="289.0" text="April" GridPane.rowIndex="4" />
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="290.0" text="May" GridPane.rowIndex="5" />
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="290.0" text="June" GridPane.rowIndex="6" />
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="291.0" text="July" GridPane.rowIndex="7" />
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="299.0" text="August" GridPane.rowIndex="8" />
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="293.0" text="September" GridPane.rowIndex="9" />
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="291.0" text="October" GridPane.rowIndex="10" />
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="295.0" text="November" GridPane.rowIndex="11" />
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="345.0" text="December" GridPane.rowIndex="12" />
+                              <Label fx:id="reportsJanNumApptsLabel" alignment="CENTER" prefHeight="17.0" prefWidth="308.0" text="-" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="reportsFebNumApptsLabel" alignment="CENTER" prefHeight="17.0" prefWidth="308.0" text="-" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label fx:id="reportsMarNumApptsLabel" alignment="CENTER" prefHeight="17.0" prefWidth="308.0" text="-" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label fx:id="reportsAprNumApptsLabel" alignment="CENTER" prefHeight="17.0" prefWidth="308.0" text="-" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Label fx:id="reportsMayNumApptsLabel" alignment="CENTER" prefHeight="17.0" prefWidth="308.0" text="-" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <Label fx:id="reportsJuneNumApptsLabel" alignment="CENTER" prefHeight="17.0" prefWidth="308.0" text="-" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <Label fx:id="reportsJulNumApptsLabel" alignment="CENTER" prefHeight="17.0" prefWidth="308.0" text="-" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                              <Label fx:id="reportsAugNumApptsLabel" alignment="CENTER" prefHeight="17.0" prefWidth="308.0" text="-" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                              <Label fx:id="reportsSepNumApptsLabel" alignment="CENTER" prefHeight="17.0" prefWidth="308.0" text="-" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                              <Label fx:id="reportsOctNumApptsLabel" alignment="CENTER" prefHeight="17.0" prefWidth="308.0" text="-" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                              <Label fx:id="reportsNovNumApptsLabel" alignment="CENTER" prefHeight="17.0" prefWidth="308.0" text="-" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                              <Label fx:id="reportsDecNumApptsLabel" alignment="CENTER" prefHeight="17.0" prefWidth="308.0" text="-" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+                           </children>
+                        </GridPane>
+                        <ComboBox fx:id="reportsSelectApptTypeCombo" layoutX="433.0" layoutY="51.0" onAction="#onActionTypeSelected" prefHeight="25.0" prefWidth="192.0" promptText="Select Appointment Type" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Appointments by Contact">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                      <TableView fx:id="reportsApptContTableView" layoutX="12.0" layoutY="66.0" prefHeight="391.0" prefWidth="750.0">
+                          <columns>
+                              <TableColumn fx:id="reportsContApptIdCol" prefWidth="90.0" text="Appt. ID" />
+                              <TableColumn fx:id="reportsContTitleCol" prefWidth="84.0" text="Title" />
+                              <TableColumn fx:id="reportsContTypeCol" prefWidth="92.0" text="Type" />
+                              <TableColumn fx:id="reportsContDescCol" prefWidth="102.0" text="Description" />
+                              <TableColumn fx:id="reportsContCustCol" prefWidth="81.0" text="Customer ID" />
+                              <TableColumn fx:id="reportsContactStartCol" prefWidth="154.0" text="Start Date/Time" />
+                              <TableColumn fx:id="reportsContactEndCol" prefWidth="146.0" text="End Date/Time" />
+                          </columns>
+                      </TableView>
+                        <ComboBox fx:id="reportsSelectContactCombo" layoutX="14.0" layoutY="14.0" onAction="#onActionSelectContact" prefWidth="150.0" promptText="Select Contact" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Appointments by Customer">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="467.0" prefWidth="773.0">
+                     <children>
+                        <TableView fx:id="reportsCustApptTableView" layoutX="12.0" layoutY="65.0" prefHeight="391.0" prefWidth="750.0">
+                            <columns>
+                                <TableColumn fx:id="reportsCustApptIdCol" prefWidth="75.0" text="Appt. ID" />
+                                <TableColumn fx:id="reportsCustTitleCol" prefWidth="75.0" text="Title" />
+                                <TableColumn fx:id="reportsCustTypeCol" text="Type" />
+                                <TableColumn fx:id="reportsCustDescCol" text="Description" />
+                                <TableColumn fx:id="reportsCustLocCol" text="Location" />
+                                <TableColumn fx:id="reportsCustContCol" text="Contact ID" />
+                                <TableColumn fx:id="reportsCustStartCol" prefWidth="140.0" text="Start Date/Time" />
+                                <TableColumn fx:id="reportsCustEndCol" prefWidth="140.0" text="End Date/Time" />
+                            </columns>
+                        </TableView>
+                        <ComboBox fx:id="reportsSelectCustomerCombo" layoutX="14.0" layoutY="14.0" onAction="#onActionSelectCustomer" prefWidth="150.0" promptText="Select Customer" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
